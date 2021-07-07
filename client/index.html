@@ -1,17 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Front end</title>
-    <link rel="stylesheet" href="css/estilo.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css ">
+    <title>Documentos</title>
 </head>
 
 <body>
-    <h1>Titulo</h1>
-    <p>Ejemplo de servidor estático.</p>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+    </nav>
+    <div class="container">
+        <h1>Documentos</h1>
+        <p>Hacer una lista de documentos, con un formulario para agregar documentos con información correspondiente al título, al autor, al contenido temático y a la fecha de creación.
+        </p>
+        <p>Sobre esa lista proveer al menos 3 de los siguientes servicios de consulta:</p>
+        <ul>
+            <li>autor con mas documentos.</li>
+            <li>cantidad de documentos con más de un año de antigüedad.</li>
+            <li>lista de documentos de un tema determinado.</li>
+            <li>título más moderno</li>
+            <li>título más antiguo</li>
+            <li>tema mas tratado</li>
+        </ul>
+        <div id="alert"></div>
+        <div class="row mt-3 mb-3">
+            <div class="col">
+                <input class="form-control" placeholder="Titulo" type="text" name="" value="" id="titulo">
+            </div>
+            <div class="col">
+                <input class="form-control" placeholder="Autor" type="text" name="" value="" id="autor">
+            </div>
+            <div class="col">
+                <input class="form-control" placeholder="Temas" type="text" name="" value="" id="temas">
+            </div>
+            <div class="col">
+                <input class="form-control" placeholder="Fecha" type="date" name="" value="" id="fecha">
+            </div>
+            <div class="col-auto">
+                <button type="button" class="btn btn-info btn-block" id="btnAgregar">Agregar</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h4>Lista de Documentos</h4>
+                <hr>
+                <table class="table table-striped table-bordered table-hover table-sm">
+                    <thead class="thead-dark">
+                        <th>Titulo</th>
+                        <th>Autor</th>
+                        <th>Temas</th>
+                        <th>Fecha</th>
+                    </thead>
+                    <tbody id="tblDocumentos"></tbody>
+                </table>
+            </div>
+            <div class="col">
+                <h4>Consultas</h4>
+                <hr>
+                <div class="btn-group btn-group-toggle" role="group">
+                    <button id="btnGetAutorPopular" class="btn btn-sm btn-outline-primary">Autor con mas Documentos</button>
+                    <button id="btnGetTemaPopular" class="btn btn-sm btn-outline-primary">Tema mas Tratado</button>
+                    <button id="btnGetTituloModerno" class="btn btn-sm btn-outline-primary">Titulo mas Moderno</button>
+                </div>
+                <div class="row">
+                    <div id="result" class="col"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../client/assets/js/bootstrap.js"></script>
 </body>
 
 </html>
